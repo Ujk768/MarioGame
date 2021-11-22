@@ -33,9 +33,39 @@ function drawNext() {
 drawNext();
 */
 let enemy = [
-  { name: 'turtle', color: 'red', x: 100, y: 0, h: 50, w: 50, vx: 0, vy: 1 },
-  { name: 'turtle', color: 'red', x: 300, y: 0, h: 50, w: 50, vx: 0, vy: 1 },
-  { name: 'turtle', color: 'red', x: 500, y: 0, h: 50, w: 50, vx: 0, vy: 1 },
+  {
+    name: 'turtle',
+    color: 'red',
+    x: 100,
+    y: 0,
+    h: 50,
+    w: 50,
+    vx: 0,
+    vy: 1,
+    d_vy: 2,
+  },
+  {
+    name: 'turtle',
+    color: 'red',
+    x: 300,
+    y: 0,
+    h: 50,
+    w: 50,
+    vx: 0,
+    vy: 1,
+    d_vy: 3,
+  },
+  {
+    name: 'turtle',
+    color: 'red',
+    x: 500,
+    y: 0,
+    h: 50,
+    w: 50,
+    vx: 0,
+    vy: 1,
+    d_vy: 4,
+  },
 ];
 
 let player = {
@@ -82,10 +112,8 @@ function movePlayer(key) {
 function updateGameState() {
   for (let i = 0; i < enemy.length; i++) {
     enemy[i].y += enemy[i].vy;
-    if (enemy[i].y + enemy[i].h > gamebox.height) {
-      enemy[i].vy = -1;
-    } else if (enemy[i].y < 0) {
-      enemy[i].vy = 1;
+    if (enemy[i].y + enemy[i].h >= gamebox.height || enemy[i].y <= 0) {
+      enemy[i].vy *= -1;
     }
   }
 }
@@ -218,7 +246,9 @@ function updateGame() {
     level++;
 
     for (let i = 0; i < enemy.length; i++) {
-      enemy[i].vy *= 2;
+      enemy[i].y = 1;
+      enemy[i].vy = enemy[i].d_vy;
+      enemy[i].d_vy += 1;
     }
     player.x = playerdefault.x;
     player.y = playerdefault.y;
