@@ -1,0 +1,37 @@
+#level {
+  padding-top: 2%;
+  width: 800px;
+  height: 100px;
+  font-size: large;
+  background-color: aqua;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1 {
+  padding-top: 2%;
+  width: 800px;
+  height: 30px;
+  background-color: aqua;
+  text-align: center;
+  margin-bottom: 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#next_level {
+  background-color: lightblue;
+  position: absolute;
+  top: 35px;
+  left: 1120px;
+  cursor: pointer;
+}
+#restart_level {
+  background-color: lightblue;
+  position: absolute;
+  top: 35px;
+  left: 1150px;
+  cursor: pointer;
+}
+#next_level #restert_level :hover {
+  color: azure;
+}
