@@ -15,3 +15,7 @@ you will level up when mario reaches his princess
 GET MARIO HIS PRINCESS
 
 CLICK TO PLAY :  https://utkarsh007mariogame.netlify.app/
+
+Image of how the game looks like:
+
+![image](https://user-images.githubusercontent.com/63089923/143615789-dafb9245-e1b9-42ef-bb3c-84ecd75c3e2b.png)
